@@ -10,6 +10,11 @@ class conectar{
             $password, 
             $baseDatos);
         return $conexion;
+
+
+
+
+        
     }
 }
 ?>

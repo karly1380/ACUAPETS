@@ -3,62 +3,62 @@
 <head>
 	<title>Registro de Usuarios</title>
 
-  <style>
-    img{
-      width: 10%;
-    }
-    body {
-      background: url(img/plantas.jpg)  ; 
-      background-size: cover;
-      background-repeat: no-repeat;
-      margin: 0;
-      height: 100vh;
-    }
-  </style>
-
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" type="text/css" href="librerias/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="librerias/jquery-ui-1.12.1/jquery-ui.theme.css">
 	<link rel="stylesheet" type="text/css" href="librerias/jquery-ui-1.12.1/jquery-ui.css">
+
+ <!--Bootsrap 4 CDN-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <!--Custom styles-->
+  <link rel="stylesheet" type="text/css"  href="2.css">
 </head>
+<body>
+<div class="container">
+  <div class="d-flex justify-content-center h-100">
+    <div class="card">
+      <div class="card-header">
+
 
 
 <body>
-	<br>
 	<font color="white">
 	<div class="container">
-		<h1 class="text-center">
-			<font color="white">Registro de Usuarios</font></h1>
-			</body>
+		<h5 class="text-center">
+			<font color="#FFFF00"><b>Registrate Aqui</b></font>
+		</h5>
+		</body>
 		<hr>
-		<div class="row">
-			<div class="col-sm-4"></div>
-			<div class="col-sm-4">
+		
 			</body>
-				
 				<font color="#FFF5EE">
+			 
 				<form id="frmRegistro" method="POST" onsubmit="return agregarUsuarioNuevo()" autocomplete="off">
-					<h5>
+					<h6>
 				<center>
-					<label><b>Nombre Personal</b></label>
+					<label>Nombre Personal</label>
 					<input type="text" name="nombre" id="nombre" class="form-control" required="">
 					<br>
-					<label><b>Fecha de Nacimiento</b></label>
+					<label>Fecha de Nacimiento</label>
 					<input type="text" name="fechaNacimiento" id="fechaNacimiento" class="form-control" required="" readonly="">
 					<br>
-					<label><b>Nombre de Usuario</b></label>
+					<label>Nombre de Usuario</label>
 					<input type="text" name="usuario" id="usuario" class="form-control" required="">
 					<br>
-					<label><b>Email</b></label>
+					<label>Email</label>
 					<input type="email" name="correo" id="correo" class="form-control" required="">
 					
 					<br>
-					<label><b>Contraeña</b></label>
+					<label>Contraeña</label>
 					<input type="password" name="password" id="password" class="form-control" required="">
 
 				</center>
-			</h5>
+			</h6>
 		</font>
 				<br>
 					<div class="row">
@@ -67,7 +67,7 @@
 						</div>
 
 						<div class="col-sm-6 text-right">
-								<button class="btn btn-success">Registrar</a>
+								<button class="btn btn-warning">Registrar</a>
 						</div>
 					</div>
 				</form>
@@ -90,7 +90,7 @@
 
 				changeMonth: true,
 				changeYear: true,
-				yearRange: '1990:' + yyyy,
+				yearRange: '1950:' + yyyy,
 				dateFormat: "dd-mm-yy"
 			});
 		});
@@ -105,9 +105,9 @@
 					console.log(respuesta);
 					respuesta = respuesta.trim();
 					if (respuesta == 1) {
-						swal("Existe un Error al Ingresar, Intentelo despues :(");
+						swal("Existe un Error al Ingresar - Intentelo mas tarde");
 					}else if (respuesta == 2) {
-						swal("Este Usuario ya existe, ingrese otro :S");
+						swal("Este Usuario ya existe, Ingrese uno nuevo ");
 					}else {
 						$('#frmRegistro')[0].reset();
 						swal("Se Agrego con Exito!! :D");

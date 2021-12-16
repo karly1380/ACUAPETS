@@ -26,8 +26,9 @@
       <div class="card-header">
         <br>
         <h3>Iniciar Sesión</h3>
+        <br>
         <p align="center">
-          <img src="img/logo.gif" id="icon" alt="160" width="160"  />
+          <img src="img/logo12.jpeg" id="icon" alt="90" width="230"  />
         <br>
         </p>
 
@@ -45,35 +46,38 @@
       </div>
 
       <div class="card-body">
-        <form>
+        <form method="POST" id="frmLogin" onsubmit="return logear()">
           <div class="input-group form-group">
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="fas fa-user"></i></span>
             </div>
-            <input type="text" class="form-control" placeholder="username">   
+            <input type="text" name="usuario" class="form-control" placeholder="username">   
           </div>
           <div class="input-group form-group">
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="fas fa-key"></i></span>
             </div>
-            <input type="password" class="form-control" placeholder="password">
+            <input type="password" name="password" class="form-control" placeholder="password">
           </div>
+
 
           <div class="form-group">
-            <input type="submit" value="Entrar" class="btn float-right login_btn" >
+            <button class="btn float-right login_btn">Entrar</button>
+           
           </div>
-
         </form>
-        
-
-
       </div>
+
+
+      
       <div class="card-footer">
         <div class="d-flex justify-content-center links">
           ¿No tienes una Cuenta?<a href="registro.php">Registrar</a>
         </div>
-        <div class="d-flex justify-content-center">
-          <a href="#">Olvidaste tu Contraseña?</a>
+        <div class="d-flex justify-content-center links">
+          <a href="contraseña/index.php">¿Olvidaste tu contraseña?</a>
+        </div>
+          
         </div>
       </div>
     </div>
